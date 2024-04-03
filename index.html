@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- MAIN Container  -->
+    <div class="main">
+      <!-- Left Side  -->
+      <div class="left">
+        <!-- Logo  -->
+        <div class="logo">
+          <h2>dribble</h2>
+        </div>
+        <!-- Slogan  -->
+        <div class="slogan">
+          <h4 class="slog">Discover the world's top</h4>
+          <h4 class="slog">Designers and Creatives.</h4>
+        </div>
+        <!-- Image  -->
+        <div class="leftimg">
+          <img src="images/3.jpg" alt="art" />
+        </div>
+        <!-- Credit  -->
+        <div class="credit">
+          <p>Art by <span class="name">Peter Tarka</span></p>
+        </div>
+      </div>
+
+      <!-- Right Side  -->
+      <div class="right">
+        <div class="signup">
+            <div class="member">
+                <p>Already a Member? <a href="#">Sign In</a></p>
+            </div>
+            <div class="formdiv">
+                <h1>Sign up to Dribble</h1>
+                <div class="toast">
+                    <p>Username has already been taken</p>
+                </div>
+                <form class="form">
+                    <div class="group">
+                        <div class="inputlabel">
+                            <h4>Name</h4>
+                            <input type="text" placeholder="enter name" name="name" />
+                        </div>
+                        <div class="inputlabel">
+                            <h4>Username</h4>
+                            <input type="text" placeholder="enter username" name="username" />
+                        </div>
+                    </div>
+                    <div class="inputlabel">
+                        <h4>Email</h4>
+                        <input type="email" placeholder="enter email" name="email" />
+                    </div>
+                    <div class="inputlabel">
+                        <h4>Password</h4>
+                        <input type="password" placeholder="6+ characters" name="password" />
+                    </div>
+
+                    <div class="confirm">
+                        <input type="checkbox" title="check" name="check" id="check" />
+                        <p>Creating an account means you're okay with our <span>Terms of Service, Privacy Policy, </span>and our default <span>Notification Settings</span></p>
+                    </div>
+
+                    <button class="btn" type="submit">Create Account</button>
+
+                    <div class="info">
+                        <p>This site is protected by reCAPTCHA and the Google <span>Privacy Policy</span> and <span>Terms of Service</span> apply</p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
