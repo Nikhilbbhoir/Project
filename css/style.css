@@ -1,0 +1,86 @@
+#myContainer{
+    height: 100vh;
+}
+#left{
+    background-color: #F2D184   ;
+    color: #856115;
+}
+#image img{
+    width: 100%;
+    height: auto;
+}
+#credit p{
+    margin: 0;
+}
+
+#signup-form{
+    padding: 0 15rem;
+}
+#signup-form>p{
+    color: #E3555A;
+}
+/* #policy{
+    font-size: 1rem;
+} */
+#warn{
+    font-size: .8rem;
+    padding-right: 16rem;
+}
+#buttoncss{
+    width: fit-content;
+    padding: 0.8rem 3rem;
+    color: white;
+    font-weight: bold;
+    background-color: #EA4B8B;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.form-control{
+    background-color: whitesmoke
+}
+.form-control:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+@media screen and (min-width:1190px) and (max-width:1436px){
+    #signup-form{
+        padding: 0 10rem;
+    }
+    #warn{
+        padding-right: 16rem;
+    }
+
+}
+@media(max-width:1190px){
+    #signup-form{
+        padding: 0 5rem;
+    }
+    #warn{
+        padding-right: 5rem;
+    }
+    h4{
+        font-size: 1.1rem;
+        /* font-size: calc(0.975rem + .3vw); */
+    }
+}
+@media(max-width:760px){
+    #left{
+        padding: 5rem 0;
+    }
+    #signup-form{
+        padding: 0 1rem;
+    }
+    #warn{
+        padding-right: 1rem;
+    }
+    /* #btnca{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    } */
+    #buttoncss{
+        padding: 1rem 0.3rem;
+    }
+}

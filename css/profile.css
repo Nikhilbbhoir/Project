@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#secondscreen, #back{
+    display: none;
+    /* top: 5rem; */
+}
+#profile{
+    height: 100vh;
+}
+#pr{
+    height: 80%;
+    padding: 0rem 14rem;
+}
+#upimg{
+    width: 10rem;
+    height: 10rem;
+}
+#location{
+    outline: 0;
+    border: 1px solid #ccc; 
+    border-top: 0; 
+    border-right: 0; 
+    border-left: 0;
+}
+#loc input::placeholder{
+    color: rgb(177, 171, 171);
+    font-weight: normal;
+}
+#loc input:focus{
+    outline: none;
+    box-shadow: none;
+}
+#buttoncss,.buttoncss,#next{
+    width: fit-content;    
+    padding: 0.4rem 5rem;
+    color: white;
+    font-weight: bold;
+    background-color: #EA4B8B;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#subtitle p{
+    font-weight: 600;
+    font-size: .9rem;
+    color:rgb(154, 149, 149);
+}
+
+#imgcard1,#imgcard2,#imgcard3{
+    width: 15rem;
+    height: 15rem;
+    /* margin-top: 3rem; */
+}
+#imgcard1:focus,#imgcard2:focus,#imgcard3:focus{
+    outline-color: #EA4B8B;
+}
+#formcard{
+    padding-bottom: 0rem;
+}
+/* when card is selected */
+#para1,#para2,#para3{
+    display: none;
+}
+#cardimg1,#cardimg2,#cardimg3{
+    mix-blend-mode: multiply;
+    /* position: absolute; */
+    top: -3rem;
+    right: 0;
+}
+#cardimg3{
+    top: -5rem;
+}
+/* #imgcard1 h5,#imgcard2 h5,#imgcard3 h5{
+    margin-top: 3rem;
+} */
+#formcard{
+    margin-top: 5rem;
+}
+
+#inlineCheckbox1:focus,#inlineCheckbox2:focus,#inlineCheckbox3:focus{
+    background-color: #EA4B8B;
+    box-shadow: none;
+    outline: none;
+}
+
+.card-body{
+    padding-bottom: 0rem;
+    /* padding: 0rem; */
+}
+
+
+@media screen and (min-width:1190px) and (max-width:1436px){
+
+}
+@media(max-width:1190px){
+    #pr {
+        padding: 0rem 2rem;
+    }
+}
+@media(max-width:950px){
+    #pr {
+        padding: 0rem;
+    }
+    .card-body{
+        padding: 0rem;
+    }
+}
+@media(max-width:306){
+    #pr h1{
+        text-align: center;
+    }
+}
+

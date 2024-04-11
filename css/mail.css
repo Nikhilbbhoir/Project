@@ -1,0 +1,85 @@
+#logo>a,#footer-logo{
+    font-family: 'mona-sans';
+    font-size: 1.5rem;
+}
+#imagePreview{
+    width: 2rem;
+    height: 2rem;
+}
+#imageFile{
+    width: 6rem;
+    background-color: #EA4B8B;
+    outline: 0;
+}
+#imageFile:focus{
+    box-shadow: none;
+    outline: none;
+    background-color: #EA4B8B;
+}
+input[type="file"]::file-selector-button {
+    background-color: #EA4B8B;
+    color: white;
+}
+input[type="file"]::file-selector-button:hover,input[type="file"]::file-selector-button:focus {
+    background: #EA4B8B;
+    color: green;
+}
+
+#search{
+    outline: 0;
+}
+#search:focus{
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+footer,footer h5{
+    font-size: .9rem;
+}
+#msg{
+    height: 100vh;
+    padding: 0px 16rem;
+}
+#msg h2{
+    font-size: 2rem;
+}
+#msg a{
+    color: #EA4B8B;
+}
+#icon{
+    font-size: 5rem;
+}
+/* Media Queries  */
+
+
+
+@media (max-width:998px) {
+    #msg{
+        padding: 0rem 6rem;
+    }
+    
+}
+@media (max-width:786px) {
+    #msg{
+        font-size: .8rem;
+        padding: 0rem 5rem;
+    }
+    #msg h2{
+        font-size: 1.5rem;
+    }
+    #msg h5{
+        font-size: 1rem;
+    }
+}
+@media (max-width:350px) {
+    #msg{
+        padding: 0rem 2rem;
+    }
+    #msg h2{
+        font-size: 1rem;
+    }
+    
+}
