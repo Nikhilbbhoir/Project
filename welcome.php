@@ -1,10 +1,22 @@
 <?php
   //Start session
   session_start();
+  // Upload Image 
+  if(isset($_FILES['img'])){;
 
+    $file_name = $_FILES['img']['name'];
+    $file_size = $_FILES['img']['size'];
+    $file_tmp = $_FILES['img']['tmp_name'];
+    $file_type = $_FILES['img']['type'];
+
+    move_uploaded_file($file_tmp,"upload/".$file_name);
+  }
+  
+  // Save data
+  
   if(isset($_POST['submit'])){
-
-      //Create new session variable 
+   
+    //Create new session variable 
     foreach($_POST as $key => $value){
       $_SESSION['info'][$key] = $value;
     }
@@ -14,21 +26,21 @@
       unset($_SESSION['info']['submit']);
     } 
     // session code ends
-    
-     extract($_SESSION['info']);
-     $arr = implode(", ",$inlineCheckbox);
 
-    $hash = password_hash($password, PASSWORD_DEFAULT);
-    include("connection.php");
-    // echo $name,$user,$email,$img,$location,$arr;
-    $sql = "INSERT INTO signup(name,username,email,password,img,location,opt) VALUES ('$name','$user','$email','$hash','$img','$location','$arr')";
-        $result = mysqli_query($conn,$sql);
-       if($result){
-        // echo "Data has been saved successfully!";
-        header("Location: final.php");;
-    }else{
-        echo "mysqli_error($conn)";
-    }
+      extract($_SESSION['info']);
+      $arr = implode(", ",$inlineCheckbox);
+ 
+     $hash = password_hash($password, PASSWORD_DEFAULT);
+     include("connection.php");
+     // echo $name,$user,$email,$img,$location,$arr;
+     $sql = "INSERT INTO signup(name,username,email,password,img,location,opt) VALUES ('$name','$user','$email','$hash','$img','$location','$arr')";
+         $result = mysqli_query($conn,$sql);
+        if($result){
+         // echo "Data has been saved successfully!";
+         header("Location: final.php");
+     }else{
+         echo mysqli_error($conn);
+     }
 
   }
 ?>
@@ -55,7 +67,7 @@
             </div>
 
         </div>
-    <form method="POST" name="form" action="">
+    <form method="POST" name="form" action="" class="needs-validation" enctype="multipart/form-data">
         <!-- First Screen  -->
         <div class="container-fluid" id="firstscreen">
             <div class="container h-full d-flex flex-column align-items-start justify-content-center mx-auto fw-bolds" id="pr">
@@ -81,14 +93,14 @@
                         <div class="px-5 py-3">
                                 <div class="avatar-upload">
                                     <label for="imageFile" class="form-label  text-center">Image Upload</label>
-                                    <input type="file" class="form-control" id="imageFile" name="img" accept="image/*">
+                                    <input type="file" class="form-control" id="imageFile" name="img" accept="image/*" required>
                                 </div>
                         </div>
                     </div>
                     
                     <div class="container pt-5 px-0" id="loc">
                         <h5 class="fw-bold">Add your location</h5>
-                        <input type="text" class="form-control border-bottom no-outline fw-bold" name="location" id="location" title="location" placeholder="Enter a Location">
+                        <input type="text" class="form-control border-bottom no-outline fw-bold" name="location" id="location" title="location" placeholder="Enter a Location" required>
                     </div>
 
                 </div>
@@ -152,7 +164,9 @@
 
                    </div>
 
-                    <div class="pt-5 d-flex" id="btncard">
+                    <div class="pt-5 d-flex flex-column" id="btncard">
+                      <p class="text-center text-danger" id="checkerror">
+                        <?php echo $checkerror ?></p>
                         <button class="btn btn-primary m-auto" id="buttoncss" type="submit" name="submit">Finish</button>
                       </div>
 
