@@ -2,9 +2,6 @@
 session_start();
 
 extract($_SESSION['info']);
-    //echo "<pre>";
-   // print_r($_SESSION['info']); 
-    //echo "</pre>";
      $imgurl = $img;
     $emailid = $email;
 
@@ -56,7 +53,7 @@ extract($_SESSION['info']);
               <i class="fa-solid fa-briefcase"></i>
             </div>
             <div class="mx-2" id="upimg">
-                <img id="imagePreview" src="images/<?php echo $imgurl ?>" alt="Image Preview" class="card-img-top rounded-circle">
+                <img id="imagePreview" src="upload/<?php echo $imgurl ?>" alt="Image Preview" class="card-img-top rounded-circle">
             </div>
             <div class="avatar-upload">
                 <input type="file" class="form-control" id="imageFile" title="imageFile" accept="image/*">
